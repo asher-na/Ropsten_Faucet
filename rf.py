@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 import ropsten_faucet
 import time
 from selenium.webdriver import ActionChains
