@@ -32,9 +32,15 @@ driver = webdriver.Chrome(_chromedriver, options=options)
 
 def drivers():
     global driver
+    sysOS = platform.system()
     options = webdriver.ChromeOptions()
-    _chromedriver = '/Users/medium/python/chromedriver'
-    packed_extension_path = '/Users/medium/python/nkbihfbeogaeaoehlefnkodbefgpgknn.zip'
+    if (sysOS == 'Windows'):
+        _chromedriver = '../driver/window_chromedriver' #chromedriver 위치에 따라 변경해야 함
+        print('Windows')
+    else:
+        _chromedriver = '../driver/chromedriver' #chromedriver 위치에 따라 변경해야 함
+        print('MacOS')
+    packed_extension_path = '../crx/Metamask.crx' #chrome extension 위치에 따라 변경해야 함
     options.add_extension(packed_extension_path)
     driver = webdriver.Chrome(_chromedriver, options=options)
 
