@@ -97,9 +97,9 @@ while count <10:
             #driver.refresh()
             WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.CSS_SELECTOR, "section > div:nth-child(1) > div.panel-body > button"))).click()
             print('{}회 재 클릭'.format(count))                    
-            time.sleep(2)
+            time.sleep(10)
             driver.quit()
-            time.sleep(5)
+            time.sleep(3)
             ropsten_faucet.drivers()
             print('driver 재 시작')
             break            
