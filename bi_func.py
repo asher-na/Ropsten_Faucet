@@ -19,8 +19,15 @@ import platform
 
 warnings.filterwarnings('ignore')
 
+sysOS = platform.system()
+options = webdriver.ChromeOptions()
+if (sysOS == 'Windows'):
+    _chromedriver = '../driver/window_chromedriver' #chromedriver 위치에 따라 변경해야 함
+    print('Windows')
+else:
+    _chromedriver = '../driver/chromedriver' #chromedriver 위치에 따라 변경해야 함
+    print('MacOS')
 
-_chromedriver = '/Users/medium/python/chromedriver'
 driver = webdriver.Chrome(_chromedriver)
 driver.get('https://testnet.binance.org/faucet-smart')
 
