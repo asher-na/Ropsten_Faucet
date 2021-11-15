@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-import ropsten_faucet
+import ro_func
 import time
 from selenium.webdriver import ActionChains
 from selenium.webdriver.common.by import By
@@ -8,7 +8,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.common.exceptions import StaleElementReferenceException
 
 
-driver = ropsten_faucet.driver
+driver = ro_func.driver
 count = 0
 seed = ("bind orbit account repeat buddy sad clog property vapor cake raven original",
             "tower boost ready buddy task sudden lake lemon charge hamster capital organ",
@@ -23,8 +23,8 @@ seed = ("bind orbit account repeat buddy sad clog property vapor cake raven orig
 
 while count <10:
     count = count + 1      
-    ropsten_faucet.extention()
-    driver = ropsten_faucet.driver
+    ro_func.extention()
+    driver = ro_func.driver
     driver.implicitly_wait(10)
     #metamask wallet 설정
     driver.find_element_by_xpath('//*[@id="app-content"]/div/div[2]/div/div/div/button').click()
@@ -100,7 +100,7 @@ while count <10:
             time.sleep(10)
             driver.quit()
             time.sleep(3)
-            ropsten_faucet.drivers()
+            ro_func.drivers()
             print('driver 재 시작')
             break            
         except(StaleElementReferenceException):
@@ -108,6 +108,6 @@ while count <10:
 
 if count == 10:
     time.sleep(3)
-    driver = ropsten_faucet.driver
+    driver = ro_func.driver
     driver.quit()
     print('the end')
