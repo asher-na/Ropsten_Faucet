@@ -26,7 +26,7 @@ if (sysOS == 'Windows'):
 else:
     _chromedriver = '../driver/chromedriver' #chromedriver 위치에 따라 변경해야 함
     print('MacOS')
-packed_extension_path = '../crx/Medium-Wallet.crx' #chrome extension 위치에 따라 변경해야 함
+packed_extension_path = '../crx/Metamask.crx' #chrome extension 위치에 따라 변경해야 함
 options.add_extension(packed_extension_path)
 driver = webdriver.Chrome(_chromedriver, options=options)
 
