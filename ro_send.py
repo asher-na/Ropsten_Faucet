@@ -42,7 +42,7 @@ while count <10:
     time.sleep(2)
     driver.find_element_by_xpath('//*[@id="app-content"]/div/div[2]/div/div/button').click()
     time.sleep(3)
-    driver.find_element_by_xpath('//*[@id="popover-content"]/div/div/section/header/div/button').click()
+    #driver.find_element_by_xpath('//*[@id="popover-content"]/div/div/section/header/div/button').click()
     time.sleep(3)
 
     #wallet net 변경
