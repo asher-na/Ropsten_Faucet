@@ -1,12 +1,12 @@
 # -*- coding: utf-8 -*-
-import ro_func
+
 import time
 from selenium.webdriver import ActionChains
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.common.exceptions import StaleElementReferenceException
-
+import ro_func
 
 driver = ro_func.driver
 count = 0
