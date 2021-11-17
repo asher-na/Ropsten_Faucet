@@ -30,20 +30,6 @@ packed_extension_path = '../crx/Metamask.crx' #chrome extension 위치에 따라
 options.add_extension(packed_extension_path)
 driver = webdriver.Chrome(_chromedriver, options=options)
 
-def drivers():
-    global driver
-    sysOS = platform.system()
-    options = webdriver.ChromeOptions()
-    if (sysOS == 'Windows'):
-        _chromedriver = '../driver/window_chromedriver' #chromedriver 위치에 따라 변경해야 함
-        print('Windows')
-    else:
-        _chromedriver = '../driver/chromedriver' #chromedriver 위치에 따라 변경해야 함
-        print('MacOS')
-    packed_extension_path = '../crx/Metamask.crx' #chrome extension 위치에 따라 변경해야 함
-    options.add_extension(packed_extension_path)
-    driver = webdriver.Chrome(_chromedriver, options=options)
-
 def extention():
     time.sleep(2)
     # 여러 Tab이 있을 경우 확장 프로그램이 실행된 Tab 찾아서 포커스 옮기
