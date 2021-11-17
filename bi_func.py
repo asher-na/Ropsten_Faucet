@@ -25,7 +25,7 @@ if (sysOS == 'Windows'):
     _chromedriver = '../driver/window_chromedriver' #chromedriver 위치에 따라 변경해야 함
     print('Windows')
 else:
-    _chromedriver = '../driver/chromedriver' #chromedriver 위치에 따라 변경해야 함
+    _chromedriver = '../driver/chromedriver' #chromedriver 위치에 따라 변경해야 함    
     print('MacOS')
 
 driver = webdriver.Chrome(_chromedriver)
