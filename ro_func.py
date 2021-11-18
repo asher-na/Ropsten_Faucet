@@ -31,6 +31,7 @@ options.add_extension(packed_extension_path)
 driver = webdriver.Chrome(_chromedriver, options=options)
 
 def drivers():
+    global driver
     options = webdriver.ChromeOptions()
     if (sysOS == 'Windows'):
         _chromedriver = '../driver/window_chromedriver' #chromedriver 위치에 따라 변경해야 함
