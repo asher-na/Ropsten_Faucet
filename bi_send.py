@@ -9,3 +9,4 @@ import bi_func
 
 bi_func.faucet_start()
 
+print('noob')
