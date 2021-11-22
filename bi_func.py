@@ -39,5 +39,5 @@ def faucet_start():
     action = ActionChains(driver)
     submenu = WebDriverWait(driver, 10).until(EC.visibility_of_element_located((By.XPATH, '/html/body/div/div/div[2]/div/div[1]/span[1]/ul/li/a')))
     action.move_to_element(submenu).click().perform()
-    time.sleep(5)
+    time.sleep(6)
     driver.quit()
