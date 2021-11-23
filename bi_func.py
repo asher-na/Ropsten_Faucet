@@ -41,3 +41,5 @@ def faucet_start():
     action.move_to_element(submenu).click().perform()
     time.sleep(6)
     driver.quit()
+
+print('good~good~good')
