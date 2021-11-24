@@ -8,5 +8,3 @@ from selenium.common.exceptions import StaleElementReferenceException
 import bi_func
 
 bi_func.faucet_start()
-
-print('d')
